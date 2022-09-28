@@ -16,6 +16,9 @@
                 {% if request.user.is_authenticated %}
                 <img src="{{ imagen }}" width="100">
                 <p>{{ user.username }}</p>
+                <a class="btn btn-primary" href="{% url 'form_mensaje' %}">Enviar Mensaje</a>
+                <a class="btn btn-primary" href="{% url 'messages' %}">mensajes</a>
+
                 {% endif %}
                 <li><a href="{% url 'busqueda_blog' %}">Buscar blog</a></li>
                 <li><a href="{% url 'pages' %}">Ver todos los blogs</a></li>

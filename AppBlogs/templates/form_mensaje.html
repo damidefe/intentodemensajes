@@ -1,28 +1,4 @@
-{% extends "padre.html" %}
 
-{% block head %}
-
-    <title>Inicio</title>
-
-{% endblock %}
-
-{% block body %}
-
-    <h1>Inicio</h1>
-    <p>Pues el Inicio</p>
-    {% if request.user.is_authenticated %}
-    <h2>Bienvenido, {{ user.username }}</h2>
-    {% endif %}
-
-    <h2>
-        Mensaje: {{ mensaje }}
-    </h2>
-
-
-
-<h1>Mensajes</h1>
-
-<h1 class="mb-5">Mensajes</h1>
 
 
 <form action="/form_mensaje/", method="POST"> {% csrf_token %}
