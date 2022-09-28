@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{% block head %}
+
+    <title>Agregar avatar</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <h1>Editar avatar</h1>
+    <p>Editar avatar del perfil</p>
+
+    <h1>Editando perfil {{ usuario }}</h1> 
+    <form action="{% url 'editar_avatar' %}" method ="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button type="submit">Confirmar</button>
+
+    </form>
+
+    <h1>{{ mensaje }}</h1>
+
+{% endblock %}
